@@ -5,12 +5,14 @@ using namespace std;
 
 class Vehicle {
 private:
-	string mat; //Matricula
-	int nPlaces; //Numero de lugares
+	string mat;
+	int nPlaces;
+	int placesOccupied;
 public:
 	Vehicle(string mat, int nPlaces);
 	string getMat() const;
 	int getNPlaces() const;
+	int getPlacesOccupied() const;
 };
 
 #endif /* VEHICLE_H_ */
