@@ -7,10 +7,15 @@
 
 #include "Reserve.h"
 
-Reserve::Reserve(int h, int m, string dest) {
-	this->h = h;
-	this->m = m;
+Reserve::Reserve(string name, int NIF, string dest, int d, int m, int y, int h, int min) {
+	this->name = name;
+	this->NIF = NIF;
 	this->dest = dest;
+	this->d = d;
+	this->m = m;
+	this->y = y;
+	this->h = h;
+	this->min = min;
 }
 
 int Reserve::getHour() const{
@@ -23,4 +28,8 @@ int Reserve::getMinutes() const{
 
 string Reserve::getDest() const{
 	return dest;
+}
+
+void Reserve::show(){
+	cout << name << "  |  " << NIF << "  |  " << dest << "  |  " << d << "-" << m << "-" << y << "  |  " << h << ":" << min << endl;
 }

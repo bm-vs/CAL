@@ -3,6 +3,7 @@
 Vehicle::Vehicle(string mat, int nPlaces) {
 	this->mat = mat;
 	this->nPlaces = nPlaces;
+	this->occupated = false;
 	this->placesOccupied = 0;
 }
 
@@ -14,6 +15,14 @@ int Vehicle::getNPlaces() const{
 	return nPlaces;
 }
 
+bool Vehicle::getOccupated() const{
+	return occupated;
+}
+
 int Vehicle::getPlacesOccupied() const{
 	return placesOccupied;
+}
+
+void Vehicle::show(){
+	cout << mat << "  |  " << nPlaces << endl;
 }
